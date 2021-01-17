@@ -12,3 +12,26 @@ filterOddValues([1, 2, 3, 4, 5]);
 // reduce & Arrow function
 const reduceValues = (arr) => arr.reduce((x, y) => x + y, 1000000);
 reduceValues([1, 2, 3, 4, 5]);
+
+// PseudoClassical & Arrow fucntion
+const Delay = function (delay, reaction) {
+  this.delay = delay;
+  this.reaction = reaction;
+};
+
+Delay.prototype.haveReaction = function () {
+  setTimeout(() => {
+    console.log(this.reaction);
+  }, this.delay);
+};
+
+// // PseudoClassical
+// Delay.prototype.haveReaction = function () {
+//   let _this = this;
+//   setTimeout(function () {
+//     console.log(_this.reaction);
+//   }, _this.delay);
+// };
+
+let a = new Delay(1000, "hello world");
+a.haveReaction();
