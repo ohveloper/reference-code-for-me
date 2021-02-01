@@ -6,7 +6,7 @@ const somethigGonnaHappen = (callback) => {
     callback(null, something);
   }
 
-  if (isSomethingGood) {
+  if (isSomethingBad) {
     // 첫번재 인자는 에러, 두번째 인자는 데이터
     callback(something, null);
   }
